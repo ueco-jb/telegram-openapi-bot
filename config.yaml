@@ -1,2 +1,4 @@
 openai-key: ""
 telegram-key: ""
+authorized-user:
+# authorized-user is a number, not a string

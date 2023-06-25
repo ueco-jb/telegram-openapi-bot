@@ -27,7 +27,7 @@ You need to set up two API keys: one for Telegram, and one for OpenAI.
 
 2. **OpenAI API Key**: Sign up on [OpenAI](https://beta.openai.com/signup/) to get your API key.
 
-3. Telegram user ID: In order to restrict bot to only one user, enter telegram user ID. To obtain your Telegram ID, you can start a chat with the @get_id_bot on Telegram, click on the START button at the bottom, and the bot will then send you a message containing your user ID.
+3. Telegram user ID: In order to restrict bot to only one user, enter telegram user ID. To obtain your Telegram ID, you can start a chat with the `@get_id_bot` on Telegram, click on the START button at the bottom, and the bot will then send you a message containing your user ID.
 
 Once you have your API keys, enter the values to `config.yaml` file.
 

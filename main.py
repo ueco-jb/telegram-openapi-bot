@@ -13,7 +13,7 @@ from telegram import __version__ as TG_VER
 try:
     from telegram import __version_info__
 except ImportError:
-    __version_info__ = (0, 0, 0, 0, 0)  # type: ignore[assignment]  # type: ignore[assignment]
+    __version_info__ = (0, 0, 0, 0, 0)
 
 if __version_info__ < (20, 0, 0, "alpha", 1):
     raise RuntimeError(
@@ -45,7 +45,6 @@ async def main() -> NoReturn:
     authorized_user = config["authorized-user"]
 
     """Run the bot."""
-    # Here we use the `async with` syntax to properly initialize and shutdown resources.
     async with Bot(telegram_key) as bot:
         # get the first pending update_id, this is so we can skip over it in case
         # we get a "Forbidden" exception.
@@ -73,17 +72,10 @@ async def prompt(bot: Bot, update_id: int, authorized_user) -> int:
         next_update_id = update.update_id + 1
 
         # check if the message is from the authorized user
-
         if update.message.from_user.id == authorized_user:
             # your bot can receive updates without messages
             # and not all messages contain text
             if update.message and update.message.text:
-                # Generate a response using OpenAI GPT-3
-                # response = openai.Completion.create(
-                #     engine="text-davinci-002",
-                #     prompt=update.message.text,
-                #     max_tokens=60
-                # )
                 response = await asyncio.to_thread(
                     openai.ChatCompletion.create,
                     model="gpt-3.5-turbo",

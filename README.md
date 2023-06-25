@@ -7,15 +7,15 @@ This is a simple Telegram bot that uses the OpenAI API to generate responses to 
 1. Clone the repository:
 
     ```
-    git clone https://github.com/ueco-jb/telegram-openai-bot.git
-    cd telegram-openai-bot
+    git clone https://github.com/ueco-jb/telegram-openapi-bot.git
+    cd telegram-openapi-bot
     ```
 
 2. Create a virtual environment and install the dependencies:
 
     ```
     python3 -m venv env
-    source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    source env/bin/activate
     pip install -r requirements.txt
     ```
 
@@ -27,9 +27,9 @@ You need to set up two API keys: one for Telegram, and one for OpenAI.
 
 2. **OpenAI API Key**: Sign up on [OpenAI](https://beta.openai.com/signup/) to get your API key.
 
-3. Telegram user ID: In order to restrict bot to only one user, enter telegram user ID. To obtain your Telegram ID, you can start a chat with the `@get_id_bot` on Telegram, click on the START button at the bottom, and the bot will then send you a message containing your user ID.
+3. **Telegram user ID**: In order to restrict bot to only one user, enter telegram user ID. To obtain your Telegram ID, you can start a chat with the `@get_id_bot` on Telegram, click on the START button at the bottom, and the bot will then send you a message containing your user ID.
 
-Once you have your API keys, enter the values to `config.yaml` file.
+Once you have your API keys, enter the values in `config.yaml` file.
 
 ## Running the Bot
 
